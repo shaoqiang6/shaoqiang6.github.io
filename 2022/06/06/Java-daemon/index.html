@@ -6,15 +6,15 @@
   
   <title>Java Daemon | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Java Daemon12345678910111213141516public class DaemonTest &amp;#123;    public static void main(String[] args) &amp;#123;        Runnable run &#x3D; () -&gt; &amp;#123;            try &amp;#123;                TimeUnit.DA">
+  <meta name="description" content="12345678910111213141516public class DaemonTest &amp;#123;    public static void main(String[] args) &amp;#123;        Runnable run &#x3D; () -&gt; &amp;#123;            try &amp;#123;                TimeUnit.DAYS.sleep(1L">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Daemon">
 <meta property="og:url" content="http://example.com/2022/06/06/Java-daemon/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Java Daemon12345678910111213141516public class DaemonTest &amp;#123;    public static void main(String[] args) &amp;#123;        Runnable run &#x3D; () -&gt; &amp;#123;            try &amp;#123;                TimeUnit.DA">
+<meta property="og:description" content="12345678910111213141516public class DaemonTest &amp;#123;    public static void main(String[] args) &amp;#123;        Runnable run &#x3D; () -&gt; &amp;#123;            try &amp;#123;                TimeUnit.DAYS.sleep(1L">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-06-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-06T06:59:18.712Z">
+<meta property="article:modified_time" content="2022-06-06T07:13:57.879Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -95,7 +95,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Java-Daemon"><a href="#Java-Daemon" class="headerlink" title="Java Daemon"></a>Java Daemon</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaemonTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">run</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                TimeUnit.DAYS.sleep(<span class="number">1L</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(run);</span><br><span class="line">        <span class="comment">// 守护线程, 默认是false, true时jvm会在执行完打印语句之后退出, false时jvm不会退出</span></span><br><span class="line">        thread.setDaemon(<span class="literal">true</span>);</span><br><span class="line">        thread.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;main 结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaemonTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">run</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                TimeUnit.DAYS.sleep(<span class="number">1L</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(run);</span><br><span class="line">        <span class="comment">// 守护线程, 默认是false, true时jvm会在执行完打印语句之后退出, false时jvm不会退出</span></span><br><span class="line">        thread.setDaemon(<span class="literal">true</span>);</span><br><span class="line">        thread.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;main 结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Java 里面 Daemon 线程的定义：如果虚拟机里面只有 Daemon 线程运行时，虚拟机就会退出。</p>
 <ul>
@@ -110,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/06/Java-daemon/" data-id="cl42dumg00000ub4u718d0vgh" data-title="Java Daemon" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/06/Java-daemon/" data-id="cl42ehvhr0000or4u1zhu365g" data-title="Java Daemon" class="article-share-link">Share</a>
       
       
       
