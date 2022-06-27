@@ -6,11 +6,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="algorithmsweek01 数组、栈、链表、队列66. 加一20. 有效的括号 stack 394. 字符串解码  stack 88. 合并有序数组 数组 66. 加一 21. 合并两个有序链表  合并n个有序链表使用分治  641. 设计循环双端队列 85. 最大矩形 88. 合并两个有序数组  从大到小放元素，从后往前遍历  26. 删除有序数组中的重复项 84. 柱状图中最大的矩形 4">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/06/27/README/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="algorithmsweek01 数组、栈、链表、队列66. 加一20. 有效的括号 stack 394. 字符串解码  stack 88. 合并有序数组 数组 66. 加一 21. 合并两个有序链表  合并n个有序链表使用分治  641. 设计循环双端队列 85. 最大矩形 88. 合并两个有序数组  从大到小放元素，从后往前遍历  26. 删除有序数组中的重复项 84. 柱状图中最大的矩形 4">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-27T14:14:31.042Z">
+<meta property="article:modified_time" content="2022-06-27T14:14:31.043Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-README" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-README" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/27/README/" class="article-date">
   <time class="dt-published" datetime="2022-06-27T14:14:31.042Z" itemprop="datePublished">2022-06-27</time>
@@ -370,235 +372,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-mac-电脑环境配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time class="dt-published" datetime="2022-06-08T08:08:48.200Z" itemprop="datePublished">2022-06-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">mac-电脑安装记录</a>
-    </h1>
+    <a href="/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mac-电脑安装记录</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="0-homebrew"><a href="#0-homebrew" class="headerlink" title="0.homebrew"></a>0.homebrew</h2><h2 id="1-maven"><a href="#1-maven" class="headerlink" title="1.maven"></a>1.maven</h2><h3 id="download"><a href="#download" class="headerlink" title="download"></a>download</h3><p>wget <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz">https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz</a></p>
-<h3 id="环境变量配置-一"><a href="#环境变量配置-一" class="headerlink" title="环境变量配置(一)"></a>环境变量配置(一)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">编辑文件</span></span><br><span class="line"></span><br><span class="line">vim ~/.bash_profile</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">增加以下两行 目录为maven解压的目录（i 为输入，<span class="built_in">command</span>+v）</span></span><br><span class="line"></span><br><span class="line">export M2_HOME=/usr/local/maven/apache-maven-3.8.1</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$M2_HOME/bin</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改完 `:wq` 保存配置</span></span><br><span class="line"></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="环境变量配置-二-（使用zsh配置）"><a href="#环境变量配置-二-（使用zsh配置）" class="headerlink" title="环境变量配置(二)（使用zsh配置）"></a>环境变量配置(二)（使用zsh配置）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">编辑文件，增加以下内容</span></span><br><span class="line"></span><br><span class="line">vi ~/.zshrc</span><br><span class="line"></span><br><span class="line">export M2_HOME=/usr/local/maven/apache-maven-3.8.1</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$M2_HOME/bin</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-tomcat"><a href="#2-tomcat" class="headerlink" title="2.tomcat"></a>2.tomcat</h2><p>sudo wget <a target="_blank" rel="noopener" href="https://mirrors.bfsu.edu.cn/apache/tomcat/tomcat-8/v8.5.65/bin/apache-tomcat-8.5.65.tar.gz">https://mirrors.bfsu.edu.cn/apache/tomcat/tomcat-8/v8.5.65/bin/apache-tomcat-8.5.65.tar.gz</a></p>
-<h2 id="3-git"><a href="#3-git" class="headerlink" title="3.git"></a>3.git</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>brew install git</p>
-<h3 id="3-1-git配置"><a href="#3-1-git配置" class="headerlink" title="3.1 git配置"></a>3.1 git配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"></span></span><br><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;yourname@abc.cn&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C &quot;yourname@gmail.com&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输入命令之后，会提示你填写新的文件名，此时需要输入新的文件名即可，例如: id_rsa_2</span></span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line"></span><br><span class="line">cat id_rsa_2.pub</span><br><span class="line"></span><br><span class="line">ssh-add ~/.ssh/id_rsa_2</span><br><span class="line"></span><br><span class="line">touch config #创建文件，增加以下内容</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">Default account</span></span><br><span class="line"></span><br><span class="line">Host git.abc.com/</span><br><span class="line"></span><br><span class="line">Hostname git.abc.com/</span><br><span class="line"></span><br><span class="line">IdentityFile ~/.ssh/id_rsa_2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">% </span><span class="language-bash">ssh-add ~/.ssh/id_rsa_2 <span class="comment"># add ssh</span></span></span><br><span class="line"></span><br><span class="line">Identity added: /Users/okk/.ssh/id_rsa_2 (yourname@abc.cn)</span><br><span class="line"></span><br><span class="line">ssh-add -K ~/.ssh/id_rsa_2</span><br></pre></td></tr></table></figure>
-
-<p>#Default account</p>
-<p>#Host git.abc.com</p>
-<p>#Host 2</p>
-<p>#HostName git.abc.com</p>
-<p>#HostName git.abc.com</p>
-<p>#PreferredAuthentications publickey</p>
-<p>Host *</p>
-<p>AddKeysToAgent yes</p>
-<p>UseKeychain yes</p>
-<p>IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_2</p>
-<p>#User <a href="mailto:&#x79;&#111;&#117;&#x72;&#x6e;&#97;&#109;&#x65;&#64;&#x61;&#98;&#99;&#x2e;&#99;&#110;">&#x79;&#111;&#117;&#x72;&#x6e;&#97;&#109;&#x65;&#64;&#x61;&#98;&#99;&#x2e;&#99;&#110;</a></p>
-<h1 id="GitLab-com-server"><a href="#GitLab-com-server" class="headerlink" title="GitLab.com server"></a>GitLab.com server</h1><p>Host git.abc.com</p>
-<p>RSAAuthentication yes</p>
-<p>IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_2</p>
-<p>ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#121;&#x6f;&#x75;&#x72;&#110;&#97;&#x6d;&#x65;&#x40;&#97;&#98;&#99;&#x2e;&#x63;&#110;">&#121;&#x6f;&#x75;&#x72;&#110;&#97;&#x6d;&#x65;&#x40;&#97;&#98;&#99;&#x2e;&#x63;&#110;</a>“</p>
-<p>vi config</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># github</span><br><span class="line"></span><br><span class="line">Host github.com</span><br><span class="line"></span><br><span class="line">HostName github.com</span><br><span class="line"></span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line"></span><br><span class="line">IdentityFile ~/.ssh/id_rsa_github</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-配置多个ssh-key"><a href="#4-配置多个ssh-key" class="headerlink" title="4.配置多个ssh key"></a>4.配置多个ssh key</h2><ol>
-<li>打开终端，切换到系统的 SSH 目录下</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>生成自己 Github 的 SSH Key</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;email地址&quot; -f id_rsa_文件名</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>复制公钥</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~/.ssh/id_rsa_文件名.pub</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>github配置公钥</li>
-</ol>
-<p>settings-&gt;SSH OR PGNkeys-&gt;addKeys 将刚刚复制的公钥粘贴到key的位置，title随便命名即可</p>
-<ol start="5">
-<li></li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017945878">参考</a></p>
-<h2 id="protocol-buffer"><a href="#protocol-buffer" class="headerlink" title="protocol buffer"></a>protocol buffer</h2><p><a target="_blank" rel="noopener" href="https://developers.google.com/protocol-buffers/docs/javatutorial">官方文档</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/580fb02f3929">安装参考</a></p>
-<h2 id="SDKMAN"><a href="#SDKMAN" class="headerlink" title="SDKMAN"></a>SDKMAN</h2><blockquote>
-<p>多版本sdk管理</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://sdkman.io/install">官网</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/448192526?utm_source=wechat_session&utm_medium=social&utm_oi=27956051181568&s_r=0">相关博客</a></p>
-<h2 id="github推荐"><a href="#github推荐" class="headerlink" title="github推荐"></a>github推荐</h2><p><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">个人博客搭建</a></p>
-<h2 id="jenv"><a href="#jenv" class="headerlink" title="jenv"></a>jenv</h2><p><a target="_blank" rel="noopener" href="https://www.jenv.be/">管理多版本jdk</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 1.安装</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install jenv</span></span><br><span class="line"></span><br><span class="line">// 2.配置环境变量</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">查看官网</span></span><br><span class="line"></span><br><span class="line">// 3.增加1.8目录</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">jenv add /Library/Java/JavaVirtualMachines/jdk-11.0.15.1.jdk/Contents/Home</span></span><br></pre></td></tr></table></figure>
-
-<p>List managed JDKs</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ jenv versions</span><br><span class="line"></span><br><span class="line">system</span><br><span class="line"></span><br><span class="line">oracle64-1.6.0.39</span><br><span class="line"></span><br><span class="line">* oracle64-1.7.0.11 (set by /Users/hikage/.jenv/version)</span><br></pre></td></tr></table></figure>
-
-<p>Configure global version</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jenv global oracle64-1.6.0.39</span><br></pre></td></tr></table></figure>
-
-<p>Configure local version (per directory)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jenv local oracle64-1.6.0.39</span><br></pre></td></tr></table></figure>
-
-<p>Configure shell instance version</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jenv shell oracle64-1.6.0.39</span><br></pre></td></tr></table></figure>
-
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
-<li>修改文件所属</li>
-</ol>
-<p>sudo chown shaoqiangyan floder</p>
-<p>sudo chown shaoqiangyan</p>
-<ol start="2">
-<li>解压 rar文件</li>
-</ol>
-<p>unrar x a.rar</p>
-<p>unrar x a.rar ~&#x2F;Downloads</p>
-<ol start="3">
-<li>解压 zip</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-id="cl4wtn8zm00031s4u9zo5ga55" data-title="mac-电脑安装记录" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-Java-daemon" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/06/Java-daemon/" class="article-date">
-  <time class="dt-published" datetime="2022-06-06T06:44:21.450Z" itemprop="datePublished">2022-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/06/Java-daemon/">Java Daemon</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaemonTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">run</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                TimeUnit.DAYS.sleep(<span class="number">1L</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(run);</span><br><span class="line">        <span class="comment">// 守护线程, 默认是false, true时jvm会在执行完打印语句之后退出, false时jvm不会退出</span></span><br><span class="line">        thread.setDaemon(<span class="literal">true</span>);</span><br><span class="line">        thread.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;main 结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Java 里面 Daemon 线程的定义：如果虚拟机里面只有 Daemon 线程运行时，虚拟机就会退出。</p>
-<ul>
-<li><p>通常守护线程是有用户线程创建或者 JVM 创建，用来辅助工作</p>
-</li>
-<li><p>主线程不是守护线程（main 线程）</p>
-</li>
-<li><p>示例中 main 线程结束后仅剩守护线程在运行，进程退出</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/06/Java-daemon/" data-id="cl4wtn8ze00001s4u5c4t9ktf" data-title="Java Daemon" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/06/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-06-06T06:18:17.416Z" itemprop="datePublished">2022-06-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/06/hello-world/" data-id="cl4wtn8zl00021s4u2mg786tv" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
