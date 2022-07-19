@@ -1,101 +1,207 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yansq&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
   
+    <link rel="shortcut icon" href="/css/images/logo.png">
   
-  <title>algorithms | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="week01 数组、栈、链表、队列66. 加一20. 有效的括号 stack 394. 字符串解码  stack 88. 合并有序数组 数组 66. 加一 21. 合并两个有序链表  合并n个有序链表使用分治  641. 设计循环双端队列 85. 最大矩形 88. 合并两个有序数组  从大到小放元素，从后往前遍历  26. 删除有序数组中的重复项 84. 柱状图中最大的矩形 42. 接雨水 206">
-<meta property="og:type" content="article">
-<meta property="og:title" content="algorithms">
-<meta property="og:url" content="http://example.com/2022/06/27/README/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="week01 数组、栈、链表、队列66. 加一20. 有效的括号 stack 394. 字符串解码  stack 88. 合并有序数组 数组 66. 加一 21. 合并两个有序链表  合并n个有序链表使用分治  641. 设计循环双端队列 85. 最大矩形 88. 合并两个有序数组  从大到小放元素，从后往前遍历  26. 删除有序数组中的重复项 84. 柱状图中最大的矩形 42. 接雨水 206">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-27T14:14:31.042Z">
-<meta property="article:modified_time" content="2022-06-27T14:16:48.967Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+  <title>
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
+      algorithms | Hexo
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   
 <link rel="stylesheet" href="/css/style.css">
 
   
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<script src="/js/qrious.js"></script>
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Hexo</span>
+    </a>
+    <ul class="right-list">
       
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-          <a class="main-nav-link" href="/">Home</a>
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
         
-      </nav>
-      <nav id="sub-nav">
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
     </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main"><article id="post-README" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/27/README/" class="article-date">
-  <time class="dt-published" datetime="2022-06-27T14:14:31.042Z" itemprop="datePublished">2022-06-27</time>
-</a>
-    
+    <div id="article-banner">
+  <h2>algorithms</h2>
+  <p class="post-date">2022-06-27</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      algorithms
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="week01-数组、栈、链表、队列"><a href="#week01-数组、栈、链表、队列" class="headerlink" title="week01 数组、栈、链表、队列"></a>week01 数组、栈、链表、队列</h2><h4 id="66-加一"><a href="#66-加一" class="headerlink" title="66. 加一"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/plus-one/">66. 加一</a></h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/">20. 有效的括号</a> stack</p>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="week01-数组、栈、链表、队列"><a href="#week01-数组、栈、链表、队列" class="headerlink" title="week01 数组、栈、链表、队列"></a>week01 数组、栈、链表、队列</h2><h4 id="66-加一"><a href="#66-加一" class="headerlink" title="66. 加一"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/plus-one/">66. 加一</a></h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/">20. 有效的括号</a> stack</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/decode-string/">394. 字符串解码</a>  stack</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-sorted-array/">88. 合并有序数组</a> 数组</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/plus-one/">66. 加一</a></p>
@@ -371,122 +477,197 @@
 <h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h2 id="每日一题"><a href="#每日一题" class="headerlink" title="每日一题"></a>每日一题</h2><h4 id="面试题-04-06-后继者"><a href="#面试题-04-06-后继者" class="headerlink" title="面试题 04.06. 后继者"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/successor-lcci/">面试题 04.06. 后继者</a></h4><blockquote>
 <p>二叉树中序遍历</p>
 </blockquote>
-<h4 id="953-验证外星语词典"><a href="#953-验证外星语词典" class="headerlink" title="953. 验证外星语词典"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/verifying-an-alien-dictionary/">953. 验证外星语词典</a></h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/27/README/" data-id="cl4wtqa2v0001c84u9bsz4xy8" data-title="algorithms" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
+<h4 id="953-验证外星语词典"><a href="#953-验证外星语词典" class="headerlink" title="953. 验证外星语词典"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/verifying-an-alien-dictionary/">953. 验证外星语词典</a></h4></section>
+    <!-- Tags START -->
     
-<nav id="article-nav">
-  
-  
-    <a href="/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">mac-电脑安装记录</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+        <span class="nav-arrow">← </span>
         
-          <aside id="sidebar">
-  
+          mac-电脑安装记录
+        
+      </a>
     
-
-  
     
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li></ul>
-    </div>
   </div>
 
-
-  
+    <!-- NAV END -->
+    <!-- 打赏 START -->
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/06/27/README/">algorithms</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/08/mac-%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">mac-电脑安装记录</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/06/Java-daemon/">Java Daemon</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/06/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
       </div>
-      <footer id="footer">
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week01-%E6%95%B0%E7%BB%84%E3%80%81%E6%A0%88%E3%80%81%E9%93%BE%E8%A1%A8%E3%80%81%E9%98%9F%E5%88%97"><span class="toc-nav-text">week01 数组、栈、链表、队列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#66-%E5%8A%A0%E4%B8%80"><span class="toc-nav-text">66. 加一</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-nav-text">206. 反转链表</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week02-%E5%93%88%E5%B8%8C%E8%A1%A8%E3%80%81%E9%9B%86%E5%90%88%E3%80%81%E6%98%A0%E5%B0%84%E3%80%81%E5%89%8D%E7%BC%80%E5%92%8C%E3%80%81%E6%9F%A5%E5%88%86%E3%80%81%E5%8F%8C%E6%8C%87%E9%92%88%E6%89%AB%E6%8F%8F"><span class="toc-nav-text">week02  哈希表、集合、映射、前缀和、查分、双指针扫描</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week03-%E9%80%92%E5%BD%92%E3%80%81%E5%88%86%E6%94%AF%E3%80%81%E6%A0%91%E3%80%81%E5%9B%BE"><span class="toc-nav-text">week03 递归、分支、树、图</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week04-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E3%80%81%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E3%80%81%E4%BA%8C%E5%8F%89%E5%A0%86%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-nav-text">week04 深度优先搜索、广度优先搜索、二叉堆、二叉搜索树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#51-N-%E7%9A%87%E5%90%8E"><span class="toc-nav-text">51. N 皇后</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#200-%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F"><span class="toc-nav-text">200. 岛屿数量</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#433-%E6%9C%80%E5%B0%8F%E5%9F%BA%E5%9B%A0%E5%8F%98%E5%8C%96"><span class="toc-nav-text">433. 最小基因变化</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week05-%E4%BA%8C%E5%88%86%E3%80%81%E6%8E%92%E5%BA%8F"><span class="toc-nav-text">week05 二分、排序</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-nav-text">二分查找</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-nav-text">三分查找</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1011-%E5%9C%A8-D-%E5%A4%A9%E5%86%85%E9%80%81%E8%BE%BE%E5%8C%85%E8%A3%B9%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="toc-nav-text">1011. 在 D 天内送达包裹的能力</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#875-%E7%88%B1%E5%90%83%E9%A6%99%E8%95%89%E7%9A%84%E7%8F%82%E7%8F%82"><span class="toc-nav-text">875. 爱吃香蕉的珂珂</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#327-%E5%8C%BA%E9%97%B4%E5%92%8C%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="toc-nav-text">327. 区间和的个数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#911-%E5%9C%A8%E7%BA%BF%E9%80%89%E4%B8%BE"><span class="toc-nav-text">911. 在线选举</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week06-%E8%B4%AA%E5%BF%83%E3%80%81%E5%8A%A8%E8%A7%841"><span class="toc-nav-text">week06 贪心、动规1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#70-%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="toc-nav-text">70. 爬楼梯</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#120-%E4%B8%89%E8%A7%92%E5%BD%A2%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C"><span class="toc-nav-text">120. 三角形最小路径和</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week07-%E5%8A%A8%E8%A7%842%E3%80%813"><span class="toc-nav-text">week07 动规2、3</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#279-%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0"><span class="toc-nav-text">279. 完全平方数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F"><span class="toc-nav-text">55. 跳跃游戏</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#45-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F-II"><span class="toc-nav-text">45. 跳跃游戏 II</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#516-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-nav-text">516. 最长回文子序列</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#124-%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E8%B7%AF%E5%BE%84%E5%92%8C"><span class="toc-nav-text">124. 二叉树中的最大路径和</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week08-%E5%AD%97%E5%85%B8%E6%A0%91%E3%80%81%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%81%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95"><span class="toc-nav-text">week08 字典树、并查集、图论算法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week09-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%E3%80%81%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2"><span class="toc-nav-text">week09 字符串处理、高级搜索</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#151-%E9%A2%A0%E5%80%92%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D"><span class="toc-nav-text">151. 颠倒字符串中的单词</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#917-%E4%BB%85%E4%BB%85%E5%8F%8D%E8%BD%AC%E5%AD%97%E6%AF%8D"><span class="toc-nav-text">917. 仅仅反转字母</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#week10-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E3%80%81%E8%B7%B3%E8%A1%A8%E3%80%81%E5%AE%9E%E6%88%98%E6%8A%80%E5%B7%A7%E3%80%81%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E4%B8%8E%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-nav-text">week10 平衡二叉树、跳表、实战技巧、树状数组与线段树</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%B7%E9%A2%98%E8%B7%AF%E5%BE%84"><span class="toc-nav-text">刷题路径</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-nav-text">1. 两数之和</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-nav-text">15. 三数之和</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#973-%E6%9C%80%E6%8E%A5%E8%BF%91%E5%8E%9F%E7%82%B9%E7%9A%84-K-%E4%B8%AA%E7%82%B9"><span class="toc-nav-text">973. 最接近原点的 K 个点</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-dfs"><span class="toc-nav-text">深度优先搜索 dfs</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#112-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C"><span class="toc-nav-text">112. 路径总和</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#130-%E8%A2%AB%E5%9B%B4%E7%BB%95%E7%9A%84%E5%8C%BA%E5%9F%9F"><span class="toc-nav-text">130. 被围绕的区域</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#979-%E5%9C%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%88%86%E9%85%8D%E7%A1%AC%E5%B8%81"><span class="toc-nav-text">979. 在二叉树中分配硬币</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9E%E6%BA%AF"><span class="toc-nav-text">回溯</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90"><span class="toc-nav-text">22. 括号生成</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#51-N-%E7%9A%87%E5%90%8E-1"><span class="toc-nav-text">51. N 皇后</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E6%B2%BB"><span class="toc-nav-text">分治</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#973-%E6%9C%80%E6%8E%A5%E8%BF%91%E5%8E%9F%E7%82%B9%E7%9A%84-K-%E4%B8%AA%E7%82%B9-1"><span class="toc-nav-text">973. 最接近原点的 K 个点</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-nav-text">动态规划</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98"><span class="toc-nav-text">每日一题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98-04-06-%E5%90%8E%E7%BB%A7%E8%80%85"><span class="toc-nav-text">面试题 04.06. 后继者</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#953-%E9%AA%8C%E8%AF%81%E5%A4%96%E6%98%9F%E8%AF%AD%E8%AF%8D%E5%85%B8"><span class="toc-nav-text">953. 验证外星语词典</span></a></li></ol></li></ol></li></ol>
+    
   </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2022/06/27/README/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2022 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
 </footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
 
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
 
 
 <script src="/js/script.js"></script>
 
 
-
-
-
-  </div>
-</body>
+  </body>
 </html>
